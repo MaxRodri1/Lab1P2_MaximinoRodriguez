@@ -28,30 +28,33 @@ public class Lab1P2_MaximinoRodriguez {
         System.out.println("Bienvenido al ejercicio de Mediana de Medianas");
         System.out.println("Ingrese el tamano deseado para la matriz,que sea un numero impar y mayor que 4");
         int TamanoMatriz = entrada.nextInt();
-
-        if (TamanoMatriz < 4) {
-            System.out.println("El tamano que ingreso no es valido,ingrese otro numero");
-
+        if (TamanoMatriz <= 4) {
+            System.out.println("El tamano de la matriz es menor a 4 o no es impar");
         } else {
-            int FilasMatriz = TamanoMatriz;
-            int ColumnasMatriz = TamanoMatriz;
+            if (TamanoMatriz % 2 == 0) {
+                System.out.println("El tamano que ingreso no es valido,ingrese otro numero");
 
-            int[][] MatrizRandom = new int[TamanoMatriz][TamanoMatriz];
+            } else {
+                int FilasMatriz = TamanoMatriz;
+                int ColumnasMatriz = TamanoMatriz;
 
-            for (int ContadorI = 0; ContadorI < MatrizRandom.length; ContadorI++) {
-                for (int ContadorJ = 0; ContadorJ < MatrizRandom[ContadorI].length; ContadorJ++) {
-                    int NumeroAleatorio = random.nextInt(0, 9);
-                    MatrizRandom[ContadorI][ContadorJ] = NumeroAleatorio;
+                int[][] MatrizRandom = new int[TamanoMatriz][TamanoMatriz];
+
+                for (int ContadorI = 0; ContadorI < MatrizRandom.length; ContadorI++) {
+                    for (int ContadorJ = 0; ContadorJ < MatrizRandom[ContadorI].length; ContadorJ++) {
+                        int NumeroAleatorio = random.nextInt(0, 10);
+                        MatrizRandom[ContadorI][ContadorJ] = NumeroAleatorio;
+                    }
                 }
-            }
-            
-            for (int ContadorI = 0; ContadorI < MatrizRandom.length; ContadorI++) {
-                for (int ContadorJ = 0; ContadorJ < MatrizRandom[ContadorI].length; ContadorJ++) {
-                    System.out.print("["+MatrizRandom[ContadorI][ContadorJ]+"]");
-                }
-                System.out.println("");
-            }
 
+                for (int ContadorI = 0; ContadorI < MatrizRandom.length; ContadorI++) {
+                    for (int ContadorJ = 0; ContadorJ < MatrizRandom[ContadorI].length; ContadorJ++) {
+                        System.out.print("[" + MatrizRandom[ContadorI][ContadorJ] + "]");
+                    }
+                    System.out.println("");
+                }
+
+            }
         }
 
     }
