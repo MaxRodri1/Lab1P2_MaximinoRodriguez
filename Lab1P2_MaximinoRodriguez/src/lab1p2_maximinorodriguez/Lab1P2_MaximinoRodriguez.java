@@ -74,16 +74,7 @@ public class Lab1P2_MaximinoRodriguez {
                     System.out.print("[" + Arreglo[i] + "]");
                 }
 
-                for (int ContadorJ = 0; ContadorJ < 3; ContadorJ++) {
-                    for (int i = 0; i < Arreglo.length - 1; i++) {
-                        if (Arreglo[i] > Arreglo[i + 1]) {
-                            int CambiadorX = Arreglo[i];
-                            int CambiadorY = Arreglo[i + 1];
-                            Arreglo[i] = CambiadorY;
-                            Arreglo[i + 1] = CambiadorX;
-                        }
-                    }
-                }
+                
 
                 System.out.println("");
 
@@ -95,7 +86,7 @@ public class Lab1P2_MaximinoRodriguez {
                 System.out.println("");
 
                 System.out.println("Matriz Ordenada");
-                for (int i = 0; i < 3; i++) {
+                for (int i = 0; i < 10; i++) {
                     for (int ContadorFilas = 0; ContadorFilas < MatrizRandom.length; ContadorFilas++) {
                         for (int ContadorColumnas = 0; ContadorColumnas < MatrizRandom[ContadorFilas].length - 1; ContadorColumnas++) {
                             if (MatrizRandom[ContadorFilas][ContadorColumnas] > MatrizRandom[ContadorFilas][ContadorColumnas + 1]) {
@@ -117,28 +108,24 @@ public class Lab1P2_MaximinoRodriguez {
                     System.out.println("");
                 }
 
-                System.out.println("");
+                
 
                 int NumeroDiv = TamanoMatriz / 2;
-                System.out.println("");
-                System.out.println(NumeroDiv);
-
                 
+                
+
+                int[]ArregloMedianaDeMedianas = new int[TamanoMatriz];
 
                 for (int ContadorMedianaI = 0; ContadorMedianaI < MatrizRandom.length; ContadorMedianaI++) {
                     //for (int ContadorMedianaJ = 0; ContadorMedianaJ < MatrizRandom[ContadorMedianaI].length; ContadorMedianaJ++) {
                         int MedianaDeMediana = MatrizRandom[ContadorMedianaI][NumeroDiv];
                         Mediana.add(MedianaDeMediana);
-
+                        ArregloMedianaDeMedianas[ContadorMedianaI]= MedianaDeMediana;
+                        
                     //}
 
                 }
 
-                System.out.println("");
-                
-                int[]ArregloMedianaDeMedianas = new int[TamanoMatriz];
-                
-                
                 System.out.println("");
                 System.out.println("Arreglo de medianas");
                 System.out.println("");
@@ -146,7 +133,39 @@ public class Lab1P2_MaximinoRodriguez {
                 for (int i = 0; i < Mediana.size(); i++) {
                     System.out.print("["+Mediana.get(i)+"]");
                 }
+                System.out.println("");
+                
+                
+                for (int ContadorJ = 0; ContadorJ < 10; ContadorJ++) {
+                    for (int i = 0; i < ArregloMedianaDeMedianas.length - 1; i++) {
+                        if (ArregloMedianaDeMedianas[i] > ArregloMedianaDeMedianas[i + 1]) {
+                            int CambiadorX = ArregloMedianaDeMedianas[i];
+                            int CambiadorY = ArregloMedianaDeMedianas[i + 1];
+                            ArregloMedianaDeMedianas[i] = CambiadorY;
+                            ArregloMedianaDeMedianas[i + 1] = CambiadorX;
+                        }
+                    }
+                }
+                
+                System.out.println("");
+                System.out.println("Arreglo de Medianas Ordenado");
+                System.out.println("");
+                
+                for (int i = 0; i < ArregloMedianaDeMedianas.length; i++) {
+                    System.out.print("[" + ArregloMedianaDeMedianas[i] + "]");
+                }
+                
+                System.out.println("");
+                
+                int MedianaDeLasMedianasFinal = ArregloMedianaDeMedianas[NumeroDiv];
+                
+                System.out.println("");
+                System.out.print("Mediana de las medianas: "+MedianaDeLasMedianasFinal);
+                System.out.println("");
+                
 
+                
+                
             }
         }
 
