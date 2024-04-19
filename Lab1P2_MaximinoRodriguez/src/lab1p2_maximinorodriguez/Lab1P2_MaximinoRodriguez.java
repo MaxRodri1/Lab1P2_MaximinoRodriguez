@@ -135,9 +135,16 @@ public class Lab1P2_MaximinoRodriguez {
                 }
 
                 System.out.println("");
-
+                
+                int[]ArregloMedianaDeMedianas = new int[TamanoMatriz];
+                
+                
+                System.out.println("");
+                System.out.println("Arreglo de medianas");
+                System.out.println("");
+                
                 for (int i = 0; i < Mediana.size(); i++) {
-                    System.out.println(Mediana.get(i));
+                    System.out.print("["+Mediana.get(i)+"]");
                 }
 
             }
