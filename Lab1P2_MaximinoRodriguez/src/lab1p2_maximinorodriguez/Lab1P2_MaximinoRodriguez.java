@@ -17,6 +17,8 @@ public class Lab1P2_MaximinoRodriguez {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        //Fila 2 Asiento 6
 
         System.out.println("");
         System.out.println("Ejercicio Practico Mediana de Medianas");
@@ -28,9 +30,11 @@ public class Lab1P2_MaximinoRodriguez {
         System.out.println("Bienvenido al ejercicio de Mediana de Medianas");
         System.out.println("Ingrese el tamano deseado para la matriz,que sea un numero impar y mayor que 4");
         int TamanoMatriz = entrada.nextInt();
+        //Numero menor a 4
         if (TamanoMatriz <= 4) {
             System.out.println("El tamano de la matriz es menor a 4 o no es impar");
         } else {
+            //Numero impar
             if (TamanoMatriz % 2 == 0) {
                 System.out.println("El tamano que ingreso no es valido,ingrese otro numero");
 
@@ -53,10 +57,19 @@ public class Lab1P2_MaximinoRodriguez {
                     }
                     System.out.println("");
                 }
+                
+                
 
             }
         }
 
+    }
+    
+    
+    public static int BubbleSort(int[][]MatrizRandom){
+        
+        
+        return 0;
     }
 
 }
