@@ -54,7 +54,7 @@ public class Lab1P2_MaximinoRodriguez {
                 System.out.println("");
                 System.out.println("Matriz Randomizada");
                 System.out.println("");
-                
+
                 for (int ContadorI = 0; ContadorI < MatrizRandom.length; ContadorI++) {
                     for (int ContadorJ = 0; ContadorJ < MatrizRandom[ContadorI].length; ContadorJ++) {
                         System.out.print("[" + MatrizRandom[ContadorI][ContadorJ] + "]");
@@ -84,32 +84,32 @@ public class Lab1P2_MaximinoRodriguez {
                         }
                     }
                 }
-                
+
                 System.out.println("");
-                
+
                 for (int i = 0; i < Arreglo.length; i++) {
                     System.out.print("[" + Arreglo[i] + "]");
                 }
-                
+
                 System.out.println("");
                 System.out.println("");
-                
+
                 System.out.println("Matriz Ordenada");
                 for (int i = 0; i < 3; i++) {
                     for (int ContadorFilas = 0; ContadorFilas < MatrizRandom.length; ContadorFilas++) {
                         for (int ContadorColumnas = 0; ContadorColumnas < MatrizRandom[ContadorFilas].length - 1; ContadorColumnas++) {
                             if (MatrizRandom[ContadorFilas][ContadorColumnas] > MatrizRandom[ContadorFilas][ContadorColumnas + 1]) {
                                 int CambiadorX = MatrizRandom[ContadorFilas][ContadorColumnas];
-                                int CambiadorY = MatrizRandom[ContadorFilas][ContadorColumnas+1];
-                                MatrizRandom[ContadorFilas][ContadorColumnas]= CambiadorY;
-                                MatrizRandom[ContadorFilas][ContadorColumnas+1] = CambiadorX;
+                                int CambiadorY = MatrizRandom[ContadorFilas][ContadorColumnas + 1];
+                                MatrizRandom[ContadorFilas][ContadorColumnas] = CambiadorY;
+                                MatrizRandom[ContadorFilas][ContadorColumnas + 1] = CambiadorX;
                             }
 
                         }
                     }
 
                 }
-                
+
                 for (int ContadorI = 0; ContadorI < MatrizRandom.length; ContadorI++) {
                     for (int ContadorJ = 0; ContadorJ < MatrizRandom[ContadorI].length; ContadorJ++) {
                         System.out.print("[" + MatrizRandom[ContadorI][ContadorJ] + "]");
@@ -119,7 +119,26 @@ public class Lab1P2_MaximinoRodriguez {
 
                 System.out.println("");
 
+                int NumeroDiv = TamanoMatriz / 2;
+                System.out.println("");
+                System.out.println(NumeroDiv);
+
                 
+
+                for (int ContadorMedianaI = 0; ContadorMedianaI < MatrizRandom.length; ContadorMedianaI++) {
+                    //for (int ContadorMedianaJ = 0; ContadorMedianaJ < MatrizRandom[ContadorMedianaI].length; ContadorMedianaJ++) {
+                        int MedianaDeMediana = MatrizRandom[ContadorMedianaI][NumeroDiv];
+                        Mediana.add(MedianaDeMediana);
+
+                    //}
+
+                }
+
+                System.out.println("");
+
+                for (int i = 0; i < Mediana.size(); i++) {
+                    System.out.println(Mediana.get(i));
+                }
 
             }
         }
